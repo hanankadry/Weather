@@ -1,11 +1,12 @@
 if (location.pathname === '/') {
     search("alexandria");
+    var searchWord = document.getElementById("search");
+    searchWord.addEventListener("keyup", item => {
+        search(item.target.value)
+    });
 };
 
-var searchWord = document.getElementById("search");
-searchWord.addEventListener("keyup", item => {
-    search(item.target.value)
-});
+search("alexandria");
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
